@@ -29,11 +29,9 @@ const productCounter = document.querySelector('.counter');
 btnPlus.addEventListener('click', productCounterPlus);
 btnMinus.addEventListener('click', productCounterMinus);
 
-//Numerical Variables
 let productCounterValue = 1;
 
 function productCounterPlus() {
-    //console.log(productCounterValue);
     setProductCounter(1);
 }
 
@@ -46,5 +44,23 @@ function setProductCounter(value) {
         productCounterValue += value;
         productCounter.innerHTML = productCounterValue;
     }
-    //console.log(value);
+}
+
+// handle thumbnail click
+const gallery = document.querySelectorAll('.pic');
+const heroImg = document.querySelector('.product-hero');
+
+gallery.forEach(img => {
+    img.addEventListener('click', onThumbClick);
+});
+
+function onThumbClick(event) {
+    //clear active state for all thumbnails
+    gallery.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    event.target.parentElement.classList.add('active');
+    //update hero image
+    heroImg.src = event.target.src.replace('-thumbnail', '');//--replacing -thumbnail with '' 
 }
