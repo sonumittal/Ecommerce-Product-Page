@@ -200,6 +200,26 @@ header .cart .cart-header {
   font-weight: 700;
 }
 
+header .cart .msg-empty {
+  color: #68707d;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 7.8rem 0;
+}
+
+header .cart .checkout {
+  background-color: #ff7d1a;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2.4rem;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
 header .cart .products-in-cart .item {
   margin: 2.4rem;
   display: -webkit-box;
@@ -245,26 +265,6 @@ header .cart .products-in-cart .item #btnDelete {
 header .cart .products-in-cart .item #btnDelete:hover {
   cursor: pointer;
   background-color: #ffede0;
-}
-
-header .cart .msg-empty {
-  color: #68707d;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  padding: 7.8rem 0;
-}
-
-header .cart .checkout {
-  background-color: #ff7d1a;
-  color: white;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin: 2.4rem;
-  padding: 1.8rem;
-  border-radius: 1rem;
-  cursor: pointer;
 }
 
 header .cart .hidden {

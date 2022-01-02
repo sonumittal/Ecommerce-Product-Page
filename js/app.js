@@ -11,3 +11,12 @@ btnMenuClose.addEventListener('click', onBtnMenuCloseClick);
 function onBtnMenuCloseClick() {
     menu.classList.add('hidden');
 }
+
+// Cart button box feature
+const cart = document.querySelector('.cart');
+const btnCart = document.querySelector('.btnCart');
+
+btnCart.addEventListener('click', openCart);
+function openCart() {
+    cart.classList.toggle('hidden');
+}
