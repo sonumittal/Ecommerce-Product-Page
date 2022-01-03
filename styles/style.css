@@ -650,6 +650,7 @@ header .hidden {
   width: 57rem;
   text-align: end;
   padding: 2rem 0;
+  margin-top: 100px;
 }
 
 .overlay .btnClose img {
