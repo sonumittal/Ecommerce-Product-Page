@@ -28,7 +28,16 @@ Users should be able to:
 ![mobile-design (9)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/mobile-design.jpg)
 ![mobile-menu (10)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/mobile-menu.jpg)
 
-
+![active-states-basket-empty (1)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/active-states-basket-empty.jpg)
+![active-states-basket-filled (2)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/active-states-basket-filled.jpg)
+![active-states-lightbox (3)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/active-states-lightbox.jpg)
+![desktop-design-lightbox (4)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/desktop-design-lightbox.jpg)
+![desktop-design (5)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/desktop-design.jpg)
+![desktop-preview (6)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/desktop-preview.jpg)
+![mobile-design-basket-empty (7)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/mobile-design-basket-empty.jpg)
+![mobile-design-basket-filled (8)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/mobile-design-basket-filled.jpg)
+![mobile-design (9)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/mobile-design.jpg)
+![mobile-menu (10)](https://github.com/sonumittal/Ecommerce-Product-Page.github.io/blob/master/design/mobile-menu.jpg)
 
 ### Links
 
