@@ -199,3 +199,84 @@ function onBtnDeleteClick() {
     }
 }
 
+// Overlay image on active image display on Desktop screen width 
+let lightboxGallery;
+let lightboxHero;
+
+const overlay = document.querySelector('.overlay');
+const lightbox = document.querySelector('.lightbox');
+
+heroImg.addEventListener('click', onHeroImgClick);
+
+function onHeroImgClick() {
+    if (window.innerWidth >= 1440) {
+        if (overlay.childElementCount == 1) {
+            const newNode = lightbox.cloneNode(true);
+            overlay.appendChild(newNode);//--lightbox class code will be cloned here
+
+            const btnOverlayClose = document.querySelector('#btnOverlayClose');
+            btnOverlayClose.addEventListener('click', onBtnOverlayClose);
+
+            lightboxGallery = overlay.querySelectorAll('.pic');
+            lightboxHero = overlay.querySelector('.product-hero');
+            lightboxGallery.forEach(img => {
+                img.addEventListener('click', onThumbClickLightbox);
+            });
+
+            const btnOverlayNext = overlay.querySelector('.next');
+            const btnOverlayPrevious = overlay.querySelector('.previous');
+            btnOverlayNext.addEventListener('click', handleBtnClickNextOverlay);
+            btnOverlayPrevious.addEventListener('click', handleBtnClickPreviousOverlay);
+        }
+        overlay.classList.remove('hidden');
+    }
+}
+
+function onBtnOverlayClose() {
+    overlay.classList.add('hidden');
+}
+
+function onThumbClickLightbox(event) {
+    //clear active state for all thumbnails
+    lightboxGallery.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    event.target.parentElement.classList.add('active');
+    //update hero image
+    lightboxHero.src = event.target.src.replace('-thumbnail', '');
+}
+
+
+function handleBtnClickNextOverlay() {
+    let imageIndex = getOverlayCurrentImageIndex();
+    imageIndex++;
+    if (imageIndex > 4) {
+        imageIndex = 1;
+    }
+    setOverlayHeroImage(imageIndex);
+}
+
+function handleBtnClickPreviousOverlay() {
+    let imageIndex = getOverlayCurrentImageIndex();
+    imageIndex--;
+    if (imageIndex < 1) {
+        imageIndex = 4;
+    }
+    setOverlayHeroImage(imageIndex);
+}
+
+function getOverlayCurrentImageIndex() {
+    const imageIndex = parseInt(lightboxHero.src.split('\\').pop().split('/').pop().replace('.jpg', '').replace('image-product-', ''));
+    return imageIndex;
+}
+
+function setOverlayHeroImage(imageIndex) {
+    lightboxHero.src = `./images/image-product-${imageIndex}.jpg`;
+    //images are not sync
+    lightboxGallery.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    lightboxGallery[imageIndex-1].classList.add('active');
+}
