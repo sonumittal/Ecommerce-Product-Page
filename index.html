@@ -13,6 +13,7 @@
       <title>Ecommerce Product Page | Dovelp</title>
 </head>
 <body>
+    <div class="container">
     <header>
         <div class="hamburger-logo-group">
             <div class="hamburger">
@@ -42,7 +43,7 @@
         <div class="cart-avatar-group">
             <div class="btnCart">
                 <img src="./images/icon-cart.svg" alt="cart icon">
-                <div class="cart-count">3</div>
+                <div class="cart-count hidden">3</div>
             </div>
 
             <img class="avatar" src="./images/image-avatar.png" alt="image avatar">
@@ -51,7 +52,7 @@
         <div class="cart hidden">
             <div class="cart-header">Cart</div>
             <div class="products-in-cart">
-                <div class="item">
+                <!-- <div class="item">
                     <img class="product-img" src="./images/image-product-1-thumbnail.jpg" alt="product 1 thumb">
                     <div class="details">
                         <div class="product-name">Autumn Limited Edition...</div>
@@ -62,10 +63,10 @@
                         </div>
                     </div>
                     <img id="btnDelete" src="./images/icon-delete.svg" alt="icon delete">
-                </div>
+                </div> -->
             </div>
-            <div class="msg-empty hidden">Your cart is empty.</div>
-            <div class="checkout">Checkout</div>
+            <div class="msg-empty">Your cart is empty.</div>
+            <div class="checkout hidden">Checkout</div>
         </div>
     </header>
     <div class="content">
@@ -125,6 +126,12 @@
                     </div>
                 </section>
     </div>
+    <div class="overlay hidden">
+        <div class="btnClose">
+            <img id="btnOverlayClose" src="./images/icon-close.svg" alt="lightbox close">
+        </div>
+    </div>
+</div>
     <script src="./js/app.js"></script>
 </body>
 </html>
